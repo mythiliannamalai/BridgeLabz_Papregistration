@@ -24,6 +24,7 @@ public class Email_Field extends BaseClass {
         PageFactory.initElements(driver, this);
     }
     public boolean valid_email_id(String valid_emailid) throws InterruptedException {
+        txt_email.clear();
         txt_email.sendKeys(valid_emailid);
         Thread.sleep(3000);
         String error_msg=error.getText();
@@ -38,6 +39,7 @@ public class Email_Field extends BaseClass {
 
     }
     public boolean invalid_email_id(String valid_emailid) throws InterruptedException {
+        txt_email.clear();
         txt_email.sendKeys(valid_emailid);
         Thread.sleep(3000);
         String error_msg=error.getText();
@@ -47,6 +49,7 @@ public class Email_Field extends BaseClass {
     }
 
     public boolean user_remove_emailid_From_Field(String valid_emailid) throws InterruptedException {
+        txt_email.clear();
         txt_email.sendKeys(valid_emailid);
         Thread.sleep(3000);
         for (int i=0;i<valid_emailid.length();i++){

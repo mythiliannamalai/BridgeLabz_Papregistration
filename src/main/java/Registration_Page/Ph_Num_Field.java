@@ -26,6 +26,7 @@ public class Ph_Num_Field extends BaseClass {
         PageFactory.initElements(driver, this);
     }
     public boolean valid_phNumber() throws InterruptedException {
+        txt_ph.clear();
         Random random = new Random();
         long number = 0;
         for(int i =0;i<9; i++){
@@ -37,12 +38,14 @@ public class Ph_Num_Field extends BaseClass {
         return icon;
     }
     public Boolean invalid_PhNumber(String invalid_ph) throws InterruptedException {
+        txt_ph.clear();
         txt_ph.sendKeys(invalid_ph);
         Thread.sleep(3000);
         boolean value= invalid_ph_num_msg.isDisplayed();
         return value;
     }
     public Boolean user_Remove_Invalid_PhNum_From_PhField(String num) throws InterruptedException {
+        txt_ph.clear();
         txt_ph.sendKeys(num);
         Thread.sleep(3000);
         for (int i=0;i<num.length();i++){
@@ -53,6 +56,7 @@ public class Ph_Num_Field extends BaseClass {
         return value;
     }
     public Boolean user_Remove_Valid_PhNum_From_PhField(String num) throws InterruptedException {
+        txt_ph.clear();
         txt_ph.sendKeys(num);
         Thread.sleep(3000);
         for (int i=0;i<num.length();i++){

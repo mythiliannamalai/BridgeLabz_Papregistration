@@ -32,6 +32,7 @@ public class Full_Name_Field extends BaseClass {
         PageFactory.initElements(driver, this);
     }
     public boolean valid_FullName(String valid_name) throws InterruptedException {
+        txt_uname.clear();
         txt_uname.sendKeys(valid_name);
         Thread.sleep(3000);
         String error_msg=error.getText();
@@ -52,6 +53,7 @@ public class Full_Name_Field extends BaseClass {
         return value;
     }
     public boolean invalid_FullName(String invalid_name) throws InterruptedException {
+        txt_uname.clear();
         txt_uname.sendKeys(invalid_name);
         Thread.sleep(3000);
         String error_msg=error.getText();
@@ -70,6 +72,7 @@ public class Full_Name_Field extends BaseClass {
         return value;
     }
     public boolean removing_Value_From_FullNameField(String name) throws InterruptedException {
+        txt_uname.clear();
         txt_uname.sendKeys(name);
         Thread.sleep(3000);
         for (int i=0;i<name.length();i++){
